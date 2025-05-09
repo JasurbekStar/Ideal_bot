@@ -1,5 +1,4 @@
 import asyncio,logging,sys
-from os import getenv
 from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, html
 from aiogram.client.default import DefaultBotProperties
@@ -8,7 +7,7 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message
 load_dotenv()
 
-TOKEN = getenv("API")
+TOKEN = "7834765504:AAEjaFj2qy01hU09q5lYdZGptqi9Fx-vfBQ"
 dp = Dispatcher()
 
 
