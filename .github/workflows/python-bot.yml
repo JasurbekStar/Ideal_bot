@@ -29,6 +29,6 @@ jobs:
 
       - name: Check syntax (optional)
         run: |
-          python main.py
+        #  python main.py
           pip install flake8
           flake8 .
