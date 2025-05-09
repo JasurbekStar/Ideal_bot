@@ -1,12 +1,14 @@
 import asyncio
 import logging
 import sys
+
 from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, html
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 from aiogram.types import Message
+
 load_dotenv()
 
 TOKEN = "7834765504:AAEjaFj2qy01hU09q5lYdZGptqi9Fx-vfBQ"
@@ -27,10 +29,16 @@ async def echo_handler(message: Message) -> None:
 
 
 async def main():
-    bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    bot = Bot(
+        token=TOKEN,
+        default=DefaultBotProperties(parse_mode=ParseMode.HTML),
+    )
     await dp.start_polling(bot)
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, stream=sys.stdout)
+    logging.basicConfig(
+        level=logging.INFO,
+        stream=sys.stdout,
+    )
     asyncio.run(main())
