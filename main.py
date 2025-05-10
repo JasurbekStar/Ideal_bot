@@ -17,11 +17,15 @@ wikipedia.set_lang("uz")
 
 @dp.message(Command(commands=["start"]))
 async def start_handler(message: Message):
+    id = message.from_user.id
+    print(id)
     await message.answer(f"Assalomu allekum, {html.bold(message.from_user.full_name)}!")
 
 
 @dp.message()
 async def message_handler(message: Message):
+    id = message.from_user.id
+    print(id)
     try:
         await message.send_copy(chat_id=message.chat.id)
         full =wikipedia.summary(message.text)
