@@ -37,6 +37,5 @@ async def main():
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-    logging.getLogger("aiogram").setLevel(logging.INFO)
     logging.info("Bot is starting...")
     asyncio.run(main())
