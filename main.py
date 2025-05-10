@@ -10,9 +10,10 @@ from aiogram.filters import Command
 from aiogram.types import Message
 
 
-TOKEN = os.getenv("API")
+TOKEN = os.getenv("7834765504:AAEjaFj2qy01hU09q5lYdZGptqi9Fx-vfBQ")
 dp = Dispatcher()
 print("TOKEN:", TOKEN)
+
 wikipedia.set_lang("uz")
 
 @dp.message(Command(commands=["start"]))
@@ -36,5 +37,5 @@ async def main():
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO,stream=sys.stdout,)
+    logging.basicConfig(level=logging.INFO,stream=sys.stdout,format="%(asctime)s - %(levelname)s - %(message)s",handlers=[logging.FileHandler("bot.log"),logging.StreamHandler(sys.stdout),])
     asyncio.run(main())

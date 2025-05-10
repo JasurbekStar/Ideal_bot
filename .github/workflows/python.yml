@@ -29,9 +29,6 @@ jobs:
           pip install -r requirements.txt
           pip install python-dotenv
           pip install wikipedia
-      - name: Run Bot
-        env:
-          API: ${{ secrets.API }}
       - name: Check syntax (optional)
         run: |  
           python main.py
