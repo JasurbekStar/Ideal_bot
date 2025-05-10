@@ -3,7 +3,6 @@ import logging
 import sys
 import os
 import wikipedia
-from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, html
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
@@ -11,7 +10,6 @@ from aiogram.filters import Command
 from aiogram.types import Message
 
 
-load_dotenv()
 TOKEN = os.getenv("API")
 dp = Dispatcher()
 print("TOKEN:", TOKEN)
