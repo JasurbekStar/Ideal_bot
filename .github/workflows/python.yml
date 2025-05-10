@@ -1,5 +1,4 @@
 name: Telegram Bot (Aiogram)
-
 on:
   push:
     branches: [main]
@@ -9,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     strategy:
       matrix:
         node-version: [20.x]
@@ -28,7 +26,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Check syntax (optional)
-        run: | #stop ✓
-          python main.py
+        run: | #stop ✓ python main.py
           pip install flake8
           flake8 .
