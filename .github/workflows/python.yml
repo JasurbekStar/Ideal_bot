@@ -1,5 +1,4 @@
 name: Telegram Bot (Aiogram)
-
 on:
   push:
     branches: [main]
