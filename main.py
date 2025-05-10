@@ -1,7 +1,6 @@
 import asyncio
 import logging
 import sys
-import os
 import wikipedia
 from aiogram import Bot, Dispatcher, html
 from aiogram.client.default import DefaultBotProperties
@@ -10,7 +9,7 @@ from aiogram.filters import Command
 from aiogram.types import Message
 
 
-TOKEN = os.getenv("7834765504:AAEjaFj2qy01hU09q5lYdZGptqi9Fx-vfBQ")
+TOKEN = "7834765504:AAEjaFj2qy01hU09q5lYdZGptqi9Fx-vfBQ"
 dp = Dispatcher()
 print("TOKEN:", TOKEN)
 
@@ -37,5 +36,5 @@ async def main():
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO,stream=sys.stdout,format="%(asctime)s - %(levelname)s - %(message)s",handlers=[logging.FileHandler("bot.log"),logging.StreamHandler(sys.stdout),])
+    logging.basicConfig(level=logging.INFO,format="%(asctime)s - %(levelname)s - %(message)s",handlers=[logging.FileHandler("bot.log"),logging.StreamHandler(sys.stdout)])
     asyncio.run(main())
