@@ -36,5 +36,5 @@ async def main():
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO,stream=sys.stdout,format="%(asctime)s - %(levelname)s - %(message)s",handlers=[logging.FileHandler("bot.log"),logging.StreamHandler(sys.stdout),])
+    logging.basicConfig(level=logging.INFO,stream=sys.stdout,format="%(asctime)s - %(levelname)s - %(message)s",handlers=[logging.FileHandler("bot.log"),logging.StreamHandler(sys.stdout)],)
     asyncio.run(main())
