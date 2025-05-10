@@ -27,6 +27,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Check syntax (optional)
-        run: | #  python main.py
+        run: | 
+          python main.py
           pip install flake8
           flake8 .
