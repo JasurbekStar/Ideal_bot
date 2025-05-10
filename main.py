@@ -17,7 +17,7 @@ wikipedia.set_lang("uz")
 
 @dp.message(Command(commands=["start"]))
 async def start_handler(message: Message):
-    await message.answer(f"Hello , {html.bold(message.from_user.full_name)}!")
+    await message.answer(f"Assalomu allekum, {html.bold(message.from_user.full_name)}!")
 
 
 @dp.message()
