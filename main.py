@@ -1,10 +1,12 @@
-import asyncio, logging, sys, wikipedia
+import asyncio, logging, sys, wikipedia,os
 from aiogram import Bot, Dispatcher, html
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import Command
 from aiogram.types import Message
-TOKEN = "7834765504:AAEjaFj2qy01hU09q5lYdZGptqi9Fx-vfBQ"
+from dotenv import load_dotenv
+load_dotenv()
+TOKEN = os.getenv(API)
 dp = Dispatcher()
 print("TOKEN:", TOKEN)
 wikipedia.set_lang("uz")
