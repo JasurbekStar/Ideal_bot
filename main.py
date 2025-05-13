@@ -6,7 +6,7 @@ from aiogram.filters import Command
 from aiogram.types import Message
 from dotenv import load_dotenv
 load_dotenv()
-TOKEN = os.getenv(API)
+TOKEN = os.getenv("API")
 dp = Dispatcher()
 print("TOKEN:", TOKEN)
 wikipedia.set_lang("uz")
